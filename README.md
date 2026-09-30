@@ -1,19 +1,17 @@
-# Simulación de Mazo de Cartas en Java (POO)
+# Práctica 6 - Visualizador Gráfico de Cartas
 
-Proyecto desarrollado en Java que simula la creación, barajado, reparto y gestión de un mazo de 52 cartas utilizando los principios de la Programación Orientada a Objetos.
+**Autor:** Cristian Ivan Martinez Ruiz  
+**Materia:** Programación Orientada a Objetos
 
-## Estructura del Código
-* **`Figura.java`**: Enumeración (`enum`) que define los 4 tipos de cartas (`CORAZONES`, `DIAMANTES`, `TREBOLES`, `ESPADAS`).
-* **`Carta.java`**: Modela una carta individual con valor numérico y conversión en texto (AS, JOTA, REINA, REY).
-* **`Mazo.java`**: Administra la colección de 52 cartas, funciones de barajado (`Collections.shuffle`), reparto y devoluciones.
-* **`Jugador.java`**: Modela a cada participante (Cristian, Ramiro, Diego) manteniendo sus cartas en mano.
-* **`Juego.java`**: Clase principal con el método `main` para ejecutar la simulación en consola.
+## Descripción
+Esta práctica extiende el modelo de cartas de la Práctica 5 agregando una interfaz gráfica. Se implementaron las clases `Posicion` y `Visualizador` para componer y renderizar visualmente objetos `Carta` en una ventana `Canvas` utilizando figuras geométricas básicas (`Square`, `Circle`, `Triangle`).
 
-## Requisitos de Ejecución
-* Java JDK 11 o superior.
+## Estructura del Proyecto
+- `Carta.java`: Modelo de la carta (valor y figura).
+- `Posicion.java`: Manejo de coordenadas (X, Y).
+- `Visualizador.java`: Método de clase estático `carta(Carta c, Posicion p)` para el despliegue gráfico.
+- `Canvas.java`, `Square.java`, `Circle.java`, `Triangle.java`: Librería gráfica de terceros integrada.
+- `Main.java`: Clase principal de prueba que despliega las 4 cartas en pantalla.
 
-## Instrucciones de Compilación y Ejecución (Consola)
-
-1. Compilar los archivos `.java`:
-   ```bash
-   javac *.java
+## Ejecución
+Ejecutar la clase `Main.java` desde IntelliJ para abrir la ventana gráfica y observar el despliegue de las cartas.
